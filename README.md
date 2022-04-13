@@ -5,9 +5,9 @@ The following scripts are used to clone all repositories from a GitLab instance,
 ## Usage
 
 Available scripts :
-- `clone_repos.sh`: clones all repositories from a GitLab instance to a local directory.
-- `pull_repos.sh`: pulls all changes from the repositories located in the local directory.
-- `backup_repos.sh`: pulls all changes from the repositories located in the local directory and sends out an email to an admin user with information about the backup. `pull_repos.sh` and `backup_repos.sh` only differ in the send mail function.
+- `clone_repos.sh`: clones all repositories from a GitLab instance to the current directory.
+- `pull_repos.sh`: pulls all changes from the repositories in the current directory.
+- `backup_repos.sh`: pulls all changes from the repositories in the current directory and sends out an email to an admin user with information about the backup. `pull_repos.sh` and `backup_repos.sh` only differ in the send mail function.
 
 ## Configuration
 
