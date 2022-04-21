@@ -3,6 +3,9 @@
 # Import SENDER and RECEPIENT from credentials.sh.
 source credentials.sh
 
+# change to the backup directory
+cd $GITLAB_BACKUP_DIR
+
 # Set mail subject.
 DATE=$(date +%Y-%m-%d)
 SUBJECT="Backup of repositories on $date"

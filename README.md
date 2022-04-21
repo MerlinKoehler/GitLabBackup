@@ -5,15 +5,17 @@ The following scripts are used to clone all repositories from a GitLab instance,
 ## Usage
 
 Available scripts :
-- `clone_repos.sh`: clones all repositories from a GitLab instance to the current directory.
-- `pull_repos.sh`: pulls all changes from the repositories in the current directory.
-- `backup_repos.sh`: pulls all changes from the repositories in the current directory and sends out an email to an admin user with information about the backup. `pull_repos.sh` and `backup_repos.sh` only differ in the send mail function.
+- `clone_repos.sh`: clones all repositories from a GitLab instance to the backup directory.
+- `pull_repos.sh`: pulls all changes from the repositories in the backup directory.
+- `backup_repos.sh`: pulls all changes from the repositories in the backup directory and sends out an email to an admin user with information about the backup. `pull_repos.sh` and `backup_repos.sh` only differ in the send mail function.
 
 ## Configuration
 
-First set the credentials for the GitLab instance you want to clone from in the credentials.sh file. Skip this step, if you only want to use the `pull_repos.sh` script. If you only want to use the `backup_repos.sh` script, just set the SENDER and RECIPIENT varables.
+First set the backup path on the file system. Then set the credentials for the GitLab instance you want to clone from in the credentials.sh file. Skip this step, if you only want to use the `pull_repos.sh` script. If you only want to use the `backup_repos.sh` script, just set the SENDER and RECIPIENT varables.
 
 ```bash
+GITLAB_BACKUP_DIR="/home/user/gitlab-backup"
+
 GITLAB_USER="USERNAME"
 GITLAB_TOKEN="CODE_ACCESS_TOKEN"
 

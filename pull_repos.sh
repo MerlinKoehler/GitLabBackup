@@ -1,4 +1,8 @@
 #!/bin/bash
+source credentials.sh
+
+# change to the backup directory
+cd $GITLAB_BACKUP_DIR
 
 for dir in *; do
     if [ -d "$dir" ]; then
