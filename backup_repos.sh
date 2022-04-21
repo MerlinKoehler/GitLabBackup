@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Import SENDER and RECEPIENT from credentials.sh.
-source credentials.sh
+# get the current script location
+INSTALL_DIR=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+
+# Import GITLAB_BACKUP_DIR, SENDER and RECEPIENT from credentials.sh.
+source $INSTALL_DIR/credentials.sh
 
 # change to the backup directory
 cd $GITLAB_BACKUP_DIR

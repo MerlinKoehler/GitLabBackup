@@ -1,5 +1,9 @@
 #!/bin/bash
-source credentials.sh
+
+# get the current script location
+INSTALL_DIR=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+
+source $INSTALL_DIR/credentials.sh
 
 # change to the backup directory
 cd $GITLAB_BACKUP_DIR
